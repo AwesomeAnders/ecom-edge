@@ -8,9 +8,7 @@ const Home: FC = () => {
 
   return (
     <div>
-      <DefaultLayout>
-        <Button> {t('message')}</Button>
-      </DefaultLayout>
+      <DefaultLayout></DefaultLayout>
     </div>
   )
 }

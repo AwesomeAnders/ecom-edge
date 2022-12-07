@@ -1,5 +1,5 @@
 import NextLink from 'next/link'
-import logo from '../public/logo.png'
+import logo from '../public/logo.webp'
 import {
   Box,
   Flex,
@@ -23,6 +23,7 @@ import {
   ChevronRightIcon
 } from '@chakra-ui/icons'
 import Image from 'next/image'
+import Logo from './Logo'
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure()
@@ -33,6 +34,8 @@ export default function WithSubnavigation() {
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.600', 'white')}
         minH={'80px'}
+        maxW={'1248px'}
+        mx="auto"
         py={{ base: 2 }}
         px={{ base: 4 }}
         borderBottom={1}
@@ -59,7 +62,7 @@ export default function WithSubnavigation() {
           alignItems="center"
           justify={{ base: 'center', md: 'start' }}
         >
-          <Image src={logo} loading="eager" alt="me" width="64" height="64" />
+          <Logo />
 
           <Flex display={{ base: 'none', md: 'flex' }} mx="auto">
             <DesktopNav />
